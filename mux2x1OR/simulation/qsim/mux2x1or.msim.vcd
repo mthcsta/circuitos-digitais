@@ -1,0 +1,207 @@
+$comment
+	File created using the following command:
+		vcd file mux2x1or.msim.vcd -direction
+$end
+$date
+	Fri Apr 09 11:06:21 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module mux2x1or_vlg_vec_tst $end
+$var reg 1 ! A $end
+$var reg 1 " B $end
+$var reg 1 # C $end
+$var reg 1 $ D $end
+$var wire 1 % S $end
+
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , B~input_o $end
+$var wire 1 - ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 . C~input_o $end
+$var wire 1 / A~input_o $end
+$var wire 1 0 D~input_o $end
+$var wire 1 1 inst~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+1%
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+00
+11
+$end
+#50000
+1"
+1$
+1,
+10
+01
+0%
+#100000
+1!
+1#
+0"
+0$
+1/
+1.
+0,
+00
+#150000
+1"
+1$
+1,
+10
+#200000
+0!
+0#
+0"
+0$
+0/
+0.
+0,
+00
+11
+1%
+#250000
+1"
+1$
+1,
+10
+01
+0%
+#300000
+1!
+1#
+0"
+0$
+1/
+1.
+0,
+00
+#350000
+1"
+1$
+1,
+10
+#400000
+0!
+0#
+0"
+0$
+0/
+0.
+0,
+00
+11
+1%
+#450000
+1"
+1$
+1,
+10
+01
+0%
+#500000
+1!
+1#
+0"
+0$
+1/
+1.
+0,
+00
+#550000
+1"
+1$
+1,
+10
+#600000
+0!
+0#
+0"
+0$
+0/
+0.
+0,
+00
+11
+1%
+#650000
+1"
+1$
+1,
+10
+01
+0%
+#700000
+1!
+1#
+0"
+0$
+1/
+1.
+0,
+00
+#750000
+1"
+1$
+1,
+10
+#800000
+0!
+0#
+0"
+0$
+0/
+0.
+0,
+00
+11
+1%
+#850000
+1"
+1$
+1,
+10
+01
+0%
+#900000
+1!
+1#
+0"
+0$
+1/
+1.
+0,
+00
+#950000
+1"
+1$
+1,
+10
+#1000000

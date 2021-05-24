@@ -1,0 +1,293 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -0.387
+TNS   : -0.387
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst2'
+Slack : -0.333
+TNS   : -0.333
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst3'
+Slack : -0.315
+TNS   : -0.315
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst5'
+Slack : -0.284
+TNS   : -0.284
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst4'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst0'
+Slack : -0.269
+TNS   : -0.269
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst1'
+Slack : -0.247
+TNS   : -0.247
+
+Type  : Slow 1200mV 85C Model Setup 'ripplecounter:inst|inst6'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst4'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst0'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst3'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst6'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst5'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst2'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ripplecounter:inst|inst1'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst0'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst1'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst2'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst3'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst4'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ripplecounter:inst|inst6'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -0.268
+TNS   : -0.268
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst2'
+Slack : -0.245
+TNS   : -0.245
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst3'
+Slack : -0.225
+TNS   : -0.225
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst5'
+Slack : -0.206
+TNS   : -0.206
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst1'
+Slack : -0.188
+TNS   : -0.188
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst4'
+Slack : -0.188
+TNS   : -0.188
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst0'
+Slack : -0.184
+TNS   : -0.184
+
+Type  : Slow 1200mV 0C Model Setup 'ripplecounter:inst|inst6'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst0'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst6'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst3'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst4'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst5'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst2'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ripplecounter:inst|inst1'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst0'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst1'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst2'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst3'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst4'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst6'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.032
+TNS   : -0.032
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst2'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst5'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst4'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst0'
+Slack : 0.097
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst3'
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst1'
+Slack : 0.115
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ripplecounter:inst|inst6'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst3'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst0'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst4'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst6'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst5'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst2'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ripplecounter:inst|inst1'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.092
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst0'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst1'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst2'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst3'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst4'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst5'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ripplecounter:inst|inst6'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

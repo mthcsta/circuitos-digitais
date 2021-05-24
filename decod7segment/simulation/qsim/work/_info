@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/20.1/decod7segment/simulation/qsim
+vdecod7segment
+Z1 !s110 1615427732
+!i10b 1
+!s100 zLY6YUX^beNhofFj^aP0_1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I1AmdSm[l:hOJ<93kT6KWI0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1615427728
+8decod7segment.vo
+Fdecod7segment.vo
+!i122 14
+L0 32 418
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1615427731.000000
+!s107 decod7segment.vo|
+!s90 -work|work|decod7segment.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vdecod7segment_vlg_vec_tst
+R1
+!i10b 1
+!s100 h50o52el0fPdI8AdIW4ff1
+R2
+IPVB>QTi9g:i6QXzzYe[130
+R3
+R0
+w1615427726
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 15
+L0 30 68
+R4
+r1
+!s85 0
+31
+!s108 1615427732.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

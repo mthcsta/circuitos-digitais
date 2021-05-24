@@ -1,0 +1,174 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/20.1/neander_datapath/simulation/qsim
+vhard_block
+Z1 !s110 1619475902
+!i10b 1
+!s100 GWcK3:Yg:gbO;T6B4n1Nh0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4@nKW8b?=8n4Z;H`@D?Se2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1619475901
+Z5 8neander_datapath.vo
+Z6 Fneander_datapath.vo
+!i122 155
+L0 3622 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1619475902.000000
+Z9 !s107 neander_datapath.vo|
+Z10 !s90 -work|work|neander_datapath.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vneander_datapath
+R1
+!i10b 1
+!s100 V^j<ac^I<JJWH`7DR0W7Y3
+R2
+I?[F4U<YQW41O4V01]NMzK0
+R3
+R0
+R4
+R5
+R6
+!i122 155
+L0 32 3589
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vneander_datapath_vlg_vec_tst
+!s110 1619475903
+!i10b 1
+!s100 d[1k`;fc8aID80X>GcPWe1
+R2
+I8?BmPmT^K<5?Bb_P[>;MT3
+R3
+R0
+w1619475900
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 156
+L0 30 220
+R7
+r1
+!s85 0
+31
+!s108 1619475903.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+vregistrador
+Z13 !s110 1619302672
+!i10b 1
+!s100 ]HF7ZVNWNBVjC`A?dFOO80
+R2
+I7cj0kPg=kIBYzX1RieMWS2
+R3
+R0
+w1619302671
+R5
+R6
+!i122 33
+L0 32 538
+R7
+r1
+!s85 0
+31
+Z14 !s108 1619302672.000000
+R9
+R10
+!i113 1
+R11
+R12
+vregistrador_vlg_vec_tst
+R13
+!i10b 1
+!s100 EPdnl1;e6W7ah5nC3hW1=3
+R2
+I:;<AA;=>KHLBBXX1e]UB_3
+R3
+R0
+w1619302670
+8Waveform1_registrador.vwf.vt
+FWaveform1_registrador.vwf.vt
+!i122 34
+L0 30 98
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform1_registrador.vwf.vt|
+!s90 -work|work|Waveform1_registrador.vwf.vt|
+!i113 1
+R11
+R12
+vregistradorPC
+Z15 !s110 1619390146
+!i10b 1
+!s100 1KgBnmLkijm;1=740a;b92
+R2
+I6Z^?OA]9SYf4QWmQCaFOO1
+R3
+R0
+w1619390142
+R5
+R6
+!i122 77
+L0 32 746
+R7
+r1
+!s85 0
+31
+!s108 1619390145.000000
+R9
+R10
+!i113 1
+R11
+R12
+nregistrador@p@c
+vregistradorPC_vlg_vec_tst
+R15
+!i10b 1
+!s100 h_8J^OWA[Yl``;JOW4^Oo3
+R2
+I>mb35>V7N23IP39Nf3ho;2
+R3
+R0
+w1619390140
+8Waveform1_pc.vwf.vt
+FWaveform1_pc.vwf.vt
+!i122 78
+L0 30 96
+R7
+r1
+!s85 0
+31
+!s108 1619390146.000000
+!s107 Waveform1_pc.vwf.vt|
+!s90 -work|work|Waveform1_pc.vwf.vt|
+!i113 1
+R11
+R12
+nregistrador@p@c_vlg_vec_tst

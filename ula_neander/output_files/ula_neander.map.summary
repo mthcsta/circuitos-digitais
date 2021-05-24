@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sat Apr 10 20:27:13 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ula_neander
+Top-level Entity Name : ula_neander
+Family : Cyclone IV GX
+Total logic elements : 31
+    Total combinational functions : 31
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 28
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

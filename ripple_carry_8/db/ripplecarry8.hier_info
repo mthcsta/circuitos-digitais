@@ -1,0 +1,237 @@
+|ripplecarry8
+s0 <= somadorcompleto:somador0.C_out
+X[7] => somadorcompleto:somador7.X
+X[6] => somadorcompleto:somador6.X
+X[5] => somadorcompleto:somador5.X
+X[4] => somadorcompleto:somador4.X
+X[3] => somadorcompleto:somador3.X
+X[2] => somadorcompleto:somador2.X
+X[1] => somadorcompleto:somador1.X
+X[0] => somadorcompleto:somador0.X
+Y[7] => somadorcompleto:somador7.Y
+Y[6] => somadorcompleto:somador6.Y
+Y[5] => somadorcompleto:somador5.Y
+Y[4] => somadorcompleto:somador4.Y
+Y[3] => somadorcompleto:somador3.Y
+Y[2] => somadorcompleto:somador2.Y
+Y[1] => somadorcompleto:somador1.Y
+Y[0] => somadorcompleto:somador0.Y
+C_in => somadorcompleto:somador0.C_in
+s1 <= somadorcompleto:somador1.C_out
+s2 <= somadorcompleto:somador2.C_out
+s3 <= somadorcompleto:somador3.C_out
+s4 <= somadorcompleto:somador4.C_out
+s5 <= somadorcompleto:somador5.C_out
+s6 <= somadorcompleto:somador6.C_out
+s7 <= somadorcompleto:somador7.C_out
+carry <= somadorcompleto:somador7.S
+
+
+|ripplecarry8|somadorcompleto:somador0
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador0|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador0|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador1
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador1|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador1|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador2
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador2|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador2|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador3
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador3|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador3|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador4
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador4|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador4|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador5
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador5|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador5|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador6
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador6|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador6|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador7
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador7|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ripplecarry8|somadorcompleto:somador7|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

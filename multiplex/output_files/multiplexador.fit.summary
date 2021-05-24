@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Mar 03 08:04:44 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : multiplexador
+Top-level Entity Name : multiplexador
+Family : MAX II
+Device : EPM240T100C3
+Timing Models : Final
+Total logic elements : 8 / 240 ( 3 % )
+Total pins : 25 / 80 ( 31 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

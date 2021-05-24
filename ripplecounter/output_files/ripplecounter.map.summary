@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Thu Apr 15 02:14:27 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ripplecounter
+Top-level Entity Name : ripplecounterdecod7segment
+Family : Cyclone IV GX
+Total logic elements : 22
+    Total combinational functions : 22
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

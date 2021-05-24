@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/intelFPGA_lite/20.1/meiosomador/meiosomador.bdf
+source_file = 1, D:/intelFPGA_lite/20.1/meiosomador/Waveform.vwf
+source_file = 1, D:/intelFPGA_lite/20.1/meiosomador/db/meiosomador.cbx.xml
+design_name = meiosomador
+instance = comp, \S~output , S~output, meiosomador, 1
+instance = comp, \A~output , A~output, meiosomador, 1
+instance = comp, \X~input , X~input, meiosomador, 1
+instance = comp, \Y~input , Y~input, meiosomador, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, meiosomador, 1

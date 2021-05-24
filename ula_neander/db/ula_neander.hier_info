@@ -1,0 +1,738 @@
+|ula_neander
+F0 <= ulaneander1bit:inst.F
+X[7] => ulaneander1bitFA:inst10.X
+X[6] => ulaneander1bitFA:inst9.X
+X[5] => ulaneander1bitFA:inst8.X
+X[4] => ulaneander1bitFA:inst7.X
+X[3] => ulaneander1bitFA:inst6.X
+X[2] => ulaneander1bitFA:inst5.X
+X[1] => ulaneander1bitFA:inst4.X
+X[0] => ulaneander1bit:inst.X
+Y[7] => ulaneander1bitFA:inst10.Y
+Y[6] => ulaneander1bitFA:inst9.Y
+Y[5] => ulaneander1bitFA:inst8.Y
+Y[4] => ulaneander1bitFA:inst7.Y
+Y[3] => ulaneander1bitFA:inst6.Y
+Y[2] => ulaneander1bitFA:inst5.Y
+Y[1] => ulaneander1bitFA:inst4.Y
+Y[0] => ulaneander1bit:inst.Y
+OP[2] => ulaneander1bit:inst.OP[2]
+OP[2] => ulaneander1bitFA:inst4.OP[2]
+OP[2] => ulaneander1bitFA:inst5.OP[2]
+OP[2] => ulaneander1bitFA:inst6.OP[2]
+OP[2] => ulaneander1bitFA:inst7.OP[2]
+OP[2] => ulaneander1bitFA:inst8.OP[2]
+OP[2] => ulaneander1bitFA:inst9.OP[2]
+OP[2] => ulaneander1bitFA:inst10.OP[2]
+OP[1] => ulaneander1bit:inst.OP[1]
+OP[1] => ulaneander1bitFA:inst4.OP[1]
+OP[1] => ulaneander1bitFA:inst5.OP[1]
+OP[1] => ulaneander1bitFA:inst6.OP[1]
+OP[1] => ulaneander1bitFA:inst7.OP[1]
+OP[1] => ulaneander1bitFA:inst8.OP[1]
+OP[1] => ulaneander1bitFA:inst9.OP[1]
+OP[1] => ulaneander1bitFA:inst10.OP[1]
+OP[0] => ulaneander1bit:inst.OP[0]
+OP[0] => ulaneander1bitFA:inst4.OP[0]
+OP[0] => ulaneander1bitFA:inst5.OP[0]
+OP[0] => ulaneander1bitFA:inst6.OP[0]
+OP[0] => ulaneander1bitFA:inst7.OP[0]
+OP[0] => ulaneander1bitFA:inst8.OP[0]
+OP[0] => ulaneander1bitFA:inst9.OP[0]
+OP[0] => ulaneander1bitFA:inst10.OP[0]
+F1 <= ulaneander1bitFA:inst4.F
+F2 <= ulaneander1bitFA:inst5.F
+F3 <= ulaneander1bitFA:inst6.F
+F4 <= ulaneander1bitFA:inst7.F
+F5 <= ulaneander1bitFA:inst8.F
+F6 <= ulaneander1bitFA:inst9.F
+F7 <= ulaneander1bitFA:inst10.F
+CarryOut <= ulaneander1bitFA:inst10.C_out
+
+
+|ula_neander|ulaneander1bit:inst
+F <= mux5x1:mux.R
+X => meiosomador:inst7.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => meiosomador:inst7.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C <= meiosomador:inst7.A
+
+
+|ula_neander|ulaneander1bit:inst|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bit:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst4
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst4|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst4|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst4|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst4|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst5
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst5|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst5|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst5|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst5|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst6
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst6|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst6|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst6|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst6|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst7
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst7|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst7|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst7|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst7|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst8
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst8|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst8|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst8|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst8|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst9
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst9|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst9|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst9|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst9|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst10
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|ula_neander|ulaneander1bitFA:inst10|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|ula_neander|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|ula_neander|ulaneander1bitFA:inst10|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst10|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula_neander|ulaneander1bitFA:inst10|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

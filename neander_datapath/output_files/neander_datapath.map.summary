@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 26 19:11:52 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : neander_datapath
+Top-level Entity Name : neander_datapath
+Family : Cyclone IV E
+Total logic elements : 84
+    Total combinational functions : 59
+    Dedicated logic registers : 50
+Total registers : 50
+Total pins : 71
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

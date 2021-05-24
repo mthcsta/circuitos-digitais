@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/20.1/ripple_carry_8/simulation/qsim
+vripplecarry8
+!s110 1616452521
+!i10b 1
+!s100 E?ZmFXoQIQ>`ChB`@bjOz0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IhB5><>j9DZE]Rl:=;GY>;2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1616452517
+8ripplecarry8.vo
+Fripplecarry8.vo
+!i122 20
+L0 32 803
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1616452521.000000
+!s107 ripplecarry8.vo|
+!s90 -work|work|ripplecarry8.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vripplecarry8_vlg_vec_tst
+!s110 1616452522
+!i10b 1
+!s100 gYo`<JUW0^XZHgn=d7iP11
+R1
+IokoK;YY4K^zMj5`_?J61X1
+R2
+R0
+w1616452515
+8WaveformA.vwf.vt
+FWaveformA.vwf.vt
+!i122 21
+L0 30 226
+R3
+r1
+!s85 0
+31
+R4
+!s107 WaveformA.vwf.vt|
+!s90 -work|work|WaveformA.vwf.vt|
+!i113 1
+R5
+R6

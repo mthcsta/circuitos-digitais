@@ -1,0 +1,220 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/20.1/ula_neander/simulation/qsim
+vhard_block
+Z1 !s110 1618098357
+!i10b 1
+!s100 a>jko0K7F5`S25JmjnP9F1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+InMAW^4`g36?zHn2oG9hf73
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1618098355
+Z5 8ula_neander.vo
+Z6 Fula_neander.vo
+!i122 76
+L0 1020 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1618098357.000000
+Z9 !s107 ula_neander.vo|
+Z10 !s90 -work|work|ula_neander.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vula
+!s110 1617765393
+!i10b 1
+!s100 <h^YFT<J0zziOTUW6G0dC1
+R2
+I7l9<AgTCHi7k_>^E^i80h1
+R3
+R0
+w1617765389
+R5
+R6
+!i122 16
+L0 32 218
+R7
+r1
+!s85 0
+31
+!s108 1617765392.000000
+R9
+R10
+!i113 1
+R11
+R12
+vula_neander
+R1
+!i10b 1
+!s100 4d<P_oj8;eKDLJB:0DfgY0
+R2
+IN=ZzNLJ7]^_:_am7hh@nZ2
+R3
+R0
+R4
+R5
+R6
+!i122 76
+L0 32 987
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vula_neander_vlg_vec_tst
+R1
+!i10b 1
+!s100 _;F;@[[a?gj<?oD2>b9Ka3
+R2
+I5R?j901R6ORzSO>B08Hzk0
+R3
+R0
+w1618098354
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+!i122 77
+L0 30 142
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R11
+R12
+vula_vlg_vec_tst
+!s110 1617765394
+!i10b 1
+!s100 L[I2m;273h>eOndo6SFo=1
+R2
+IFA3XEPe5E=kgzg1GfGmNk2
+R3
+R0
+w1617765387
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 17
+L0 30 86
+R7
+r1
+!s85 0
+31
+!s108 1617765393.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+vulaneander1bit
+!s110 1618075326
+!i10b 1
+!s100 2P6eTD>AjKk1GfL8d;XgM0
+R2
+Ih1GlH1jdA38]`Xl9fUCPM3
+R3
+R0
+w1618075325
+R5
+R6
+!i122 42
+L0 32 182
+R7
+r1
+!s85 0
+31
+Z13 !s108 1618075326.000000
+R9
+R10
+!i113 1
+R11
+R12
+vulaneander1bit_vlg_vec_tst
+!s110 1618075327
+!i10b 1
+!s100 hiH3@1BEdm]<gFAjSFmOB3
+R2
+IzTZFY2;NQW20;BfS>h?2h0
+R3
+R0
+w1618075324
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 43
+L0 30 55
+R7
+r1
+!s85 0
+31
+R13
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R11
+R12
+vulaneander1bitFA
+Z14 !s110 1618091003
+!i10b 1
+!s100 2M^bBzj0gJAfdNz_ROW>S2
+R2
+IbD;edTz]FUD0[0dV>X?gU0
+R3
+R0
+w1618091002
+R5
+R6
+!i122 68
+L0 32 214
+R7
+r1
+!s85 0
+31
+Z15 !s108 1618091003.000000
+R9
+R10
+!i113 1
+R11
+R12
+nulaneander1bit@f@a
+vulaneander1bitFA_vlg_vec_tst
+R14
+!i10b 1
+!s100 9MCGFdQP61>RJ3jLe4NGC3
+R2
+IaC:S`4YSKJI;_eZ[gNhmL0
+R3
+R0
+w1618091001
+8Waveform5.vwf.vt
+FWaveform5.vwf.vt
+!i122 69
+L0 30 59
+R7
+r1
+!s85 0
+31
+R15
+!s107 Waveform5.vwf.vt|
+!s90 -work|work|Waveform5.vwf.vt|
+!i113 1
+R11
+R12
+nulaneander1bit@f@a_vlg_vec_tst

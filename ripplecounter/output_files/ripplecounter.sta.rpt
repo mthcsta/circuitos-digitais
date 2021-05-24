@@ -1,0 +1,1273 @@
+Timing Analyzer report for ripplecounter
+Thu Apr 15 02:14:38 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLK'
+ 13. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst2'
+ 14. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst3'
+ 15. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst5'
+ 16. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst4'
+ 17. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst0'
+ 18. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst1'
+ 19. Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst6'
+ 20. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst4'
+ 21. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst0'
+ 22. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst3'
+ 23. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst6'
+ 24. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst5'
+ 25. Slow 1200mV 85C Model Hold: 'CLK'
+ 26. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst2'
+ 27. Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst1'
+ 28. Slow 1200mV 85C Model Metastability Summary
+ 29. Slow 1200mV 0C Model Fmax Summary
+ 30. Slow 1200mV 0C Model Setup Summary
+ 31. Slow 1200mV 0C Model Hold Summary
+ 32. Slow 1200mV 0C Model Recovery Summary
+ 33. Slow 1200mV 0C Model Removal Summary
+ 34. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Slow 1200mV 0C Model Setup: 'CLK'
+ 36. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst2'
+ 37. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst3'
+ 38. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst5'
+ 39. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst1'
+ 40. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst4'
+ 41. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst0'
+ 42. Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst6'
+ 43. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst0'
+ 44. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst6'
+ 45. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst3'
+ 46. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst4'
+ 47. Slow 1200mV 0C Model Hold: 'CLK'
+ 48. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst5'
+ 49. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst2'
+ 50. Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst1'
+ 51. Slow 1200mV 0C Model Metastability Summary
+ 52. Fast 1200mV 0C Model Setup Summary
+ 53. Fast 1200mV 0C Model Hold Summary
+ 54. Fast 1200mV 0C Model Recovery Summary
+ 55. Fast 1200mV 0C Model Removal Summary
+ 56. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 57. Fast 1200mV 0C Model Setup: 'CLK'
+ 58. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst2'
+ 59. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst5'
+ 60. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst4'
+ 61. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst0'
+ 62. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst3'
+ 63. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst1'
+ 64. Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst6'
+ 65. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst3'
+ 66. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst0'
+ 67. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst4'
+ 68. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst6'
+ 69. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst5'
+ 70. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst2'
+ 71. Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst1'
+ 72. Fast 1200mV 0C Model Hold: 'CLK'
+ 73. Fast 1200mV 0C Model Metastability Summary
+ 74. Multicorner Timing Analysis Summary
+ 75. Board Trace Model Assignments
+ 76. Input Transition Times
+ 77. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 78. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 79. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 80. Setup Transfers
+ 81. Hold Transfers
+ 82. Report TCCS
+ 83. Report RSKM
+ 84. Unconstrained Paths Summary
+ 85. Clock Status Summary
+ 86. Unconstrained Output Ports
+ 87. Unconstrained Output Ports
+ 88. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; ripplecounter                                       ;
+; Device Family         ; Cyclone IV GX                                       ;
+; Device Name           ; EP4CGX15BF14C6                                      ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processors 3-4         ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                             ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; Clock Name               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                      ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; CLK                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }                      ;
+; ripplecounter:inst|inst0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst0 } ;
+; ripplecounter:inst|inst1 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst1 } ;
+; ripplecounter:inst|inst2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst2 } ;
+; ripplecounter:inst|inst3 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst3 } ;
+; ripplecounter:inst|inst4 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst4 } ;
+; ripplecounter:inst|inst5 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst5 } ;
+; ripplecounter:inst|inst6 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ripplecounter:inst|inst6 } ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name               ; Note                                           ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+; 1464.13 MHz ; 500.0 MHz       ; ripplecounter:inst|inst6 ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary               ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -0.387 ; -0.387        ;
+; ripplecounter:inst|inst2 ; -0.333 ; -0.333        ;
+; ripplecounter:inst|inst3 ; -0.315 ; -0.315        ;
+; ripplecounter:inst|inst5 ; -0.284 ; -0.284        ;
+; ripplecounter:inst|inst4 ; -0.274 ; -0.274        ;
+; ripplecounter:inst|inst0 ; -0.269 ; -0.269        ;
+; ripplecounter:inst|inst1 ; -0.247 ; -0.247        ;
+; ripplecounter:inst|inst6 ; 0.317  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary               ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; ripplecounter:inst|inst4 ; 0.376 ; 0.000         ;
+; ripplecounter:inst|inst0 ; 0.378 ; 0.000         ;
+; ripplecounter:inst|inst3 ; 0.378 ; 0.000         ;
+; ripplecounter:inst|inst6 ; 0.384 ; 0.000         ;
+; ripplecounter:inst|inst5 ; 0.433 ; 0.000         ;
+; CLK                      ; 0.442 ; 0.000         ;
+; ripplecounter:inst|inst2 ; 0.445 ; 0.000         ;
+; ripplecounter:inst|inst1 ; 0.491 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -3.000 ; -4.000        ;
+; ripplecounter:inst|inst0 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst1 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst2 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst3 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst4 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst5 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst6 ; -1.000 ; -1.000        ;
++--------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                                                             ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; -0.387 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.500        ; 2.072      ; 3.153      ;
+; 0.144  ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 1.000        ; 2.072      ; 3.122      ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst2'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.333 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.500        ; 0.814      ; 1.861      ;
+; 0.142  ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 1.000        ; 0.814      ; 1.886      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst3'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.315 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.500        ; 1.197      ; 2.226      ;
+; 0.190  ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 1.000        ; 1.197      ; 2.221      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst5'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.284 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.500        ; 0.898      ; 1.896      ;
+; 0.228  ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 1.000        ; 0.898      ; 1.884      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst4'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.274 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.500        ; 0.824      ; 1.812      ;
+; 0.225  ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 1.000        ; 0.824      ; 1.813      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst0'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.269 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.500        ; 0.823      ; 1.806      ;
+; 0.218  ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 1.000        ; 0.823      ; 1.819      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst1'                                                                                                     ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.247 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.500        ; 0.978      ; 1.939      ;
+; 0.222  ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 1.000        ; 0.978      ; 1.970      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'ripplecounter:inst|inst6'                                                                                                    ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.317 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 1.000        ; -0.039     ; 0.659      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst4'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.376 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.000        ; 0.877      ; 1.609      ;
+; 0.834 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; -0.500       ; 0.877      ; 1.567      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst0'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.378 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.000        ; 0.877      ; 1.611      ;
+; 0.832 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; -0.500       ; 0.877      ; 1.565      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst3'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.378 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.000        ; 1.266      ; 2.000      ;
+; 0.844 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; -0.500       ; 1.266      ; 1.966      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst6'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.384 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 0.000        ; 0.039      ; 0.580      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst5'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.433 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.000        ; 0.954      ; 1.743      ;
+; 0.909 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; -0.500       ; 0.954      ; 1.719      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                                                             ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; 0.442 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.000        ; 2.161      ; 2.979      ;
+; 0.982 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; -0.500       ; 2.161      ; 3.019      ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst2'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.445 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.000        ; 0.867      ; 1.668      ;
+; 0.895 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; -0.500       ; 0.867      ; 1.618      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'ripplecounter:inst|inst1'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.491 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.000        ; 1.037      ; 1.884      ;
+; 0.951 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; -0.500       ; 1.037      ; 1.844      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name               ; Note                                           ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+; 1661.13 MHz ; 500.0 MHz       ; ripplecounter:inst|inst6 ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+--------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -0.268 ; -0.268        ;
+; ripplecounter:inst|inst2 ; -0.245 ; -0.245        ;
+; ripplecounter:inst|inst3 ; -0.225 ; -0.225        ;
+; ripplecounter:inst|inst5 ; -0.206 ; -0.206        ;
+; ripplecounter:inst|inst1 ; -0.188 ; -0.188        ;
+; ripplecounter:inst|inst4 ; -0.188 ; -0.188        ;
+; ripplecounter:inst|inst0 ; -0.184 ; -0.184        ;
+; ripplecounter:inst|inst6 ; 0.398  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; ripplecounter:inst|inst0 ; 0.340 ; 0.000         ;
+; ripplecounter:inst|inst6 ; 0.341 ; 0.000         ;
+; ripplecounter:inst|inst3 ; 0.342 ; 0.000         ;
+; ripplecounter:inst|inst4 ; 0.343 ; 0.000         ;
+; CLK                      ; 0.363 ; 0.000         ;
+; ripplecounter:inst|inst5 ; 0.395 ; 0.000         ;
+; ripplecounter:inst|inst2 ; 0.400 ; 0.000         ;
+; ripplecounter:inst|inst1 ; 0.454 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary  ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -3.000 ; -4.000        ;
+; ripplecounter:inst|inst0 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst1 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst2 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst3 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst4 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst5 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst6 ; -1.000 ; -1.000        ;
++--------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                                                              ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; -0.268 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.500        ; 1.905      ; 2.848      ;
+; 0.261  ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 1.000        ; 1.905      ; 2.819      ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst2'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.245 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.500        ; 0.727      ; 1.667      ;
+; 0.229  ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 1.000        ; 0.727      ; 1.693      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst3'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.225 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.500        ; 1.076      ; 1.996      ;
+; 0.266  ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 1.000        ; 1.076      ; 2.005      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst5'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.206 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.500        ; 0.804      ; 1.705      ;
+; 0.298  ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 1.000        ; 0.804      ; 1.701      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst1'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.188 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.500        ; 0.870      ; 1.753      ;
+; 0.287  ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 1.000        ; 0.870      ; 1.778      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst4'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.188 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.500        ; 0.737      ; 1.620      ;
+; 0.295  ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 1.000        ; 0.737      ; 1.637      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst0'                                                                                                      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -0.184 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.500        ; 0.737      ; 1.616      ;
+; 0.295  ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 1.000        ; 0.737      ; 1.637      ;
++--------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'ripplecounter:inst|inst6'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.398 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 1.000        ; -0.034     ; 0.583      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst0'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.340 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.000        ; 0.783      ; 1.447      ;
+; 0.798 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; -0.500       ; 0.783      ; 1.405      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst6'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.341 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 0.000        ; 0.034      ; 0.519      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst3'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.342 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.000        ; 1.137      ; 1.803      ;
+; 0.809 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; -0.500       ; 1.137      ; 1.770      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst4'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.343 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.000        ; 0.783      ; 1.450      ;
+; 0.802 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; -0.500       ; 0.783      ; 1.409      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                                              ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; 0.363 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.000        ; 1.985      ; 2.692      ;
+; 0.898 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; -0.500       ; 1.985      ; 2.727      ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst5'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.395 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.000        ; 0.854      ; 1.573      ;
+; 0.870 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; -0.500       ; 0.854      ; 1.548      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst2'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.400 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.000        ; 0.773      ; 1.497      ;
+; 0.858 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; -0.500       ; 0.773      ; 1.455      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'ripplecounter:inst|inst1'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.454 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.000        ; 0.922      ; 1.700      ;
+; 0.923 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; -0.500       ; 0.922      ; 1.669      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -0.032 ; -0.032        ;
+; ripplecounter:inst|inst2 ; 0.056  ; 0.000         ;
+; ripplecounter:inst|inst5 ; 0.092  ; 0.000         ;
+; ripplecounter:inst|inst4 ; 0.093  ; 0.000         ;
+; ripplecounter:inst|inst0 ; 0.097  ; 0.000         ;
+; ripplecounter:inst|inst3 ; 0.102  ; 0.000         ;
+; ripplecounter:inst|inst1 ; 0.115  ; 0.000         ;
+; ripplecounter:inst|inst6 ; 0.624  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; ripplecounter:inst|inst3 ; 0.155 ; 0.000         ;
+; ripplecounter:inst|inst0 ; 0.184 ; 0.000         ;
+; ripplecounter:inst|inst4 ; 0.184 ; 0.000         ;
+; ripplecounter:inst|inst6 ; 0.206 ; 0.000         ;
+; ripplecounter:inst|inst5 ; 0.219 ; 0.000         ;
+; ripplecounter:inst|inst2 ; 0.225 ; 0.000         ;
+; ripplecounter:inst|inst1 ; 0.235 ; 0.000         ;
+; CLK                      ; 0.286 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary  ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; CLK                      ; -3.000 ; -4.092        ;
+; ripplecounter:inst|inst0 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst1 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst2 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst3 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst4 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst5 ; -1.000 ; -1.000        ;
+; ripplecounter:inst|inst6 ; -1.000 ; -1.000        ;
++--------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                                                              ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; -0.032 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.500        ; 1.141      ; 1.765      ;
+; 0.467  ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 1.000        ; 1.141      ; 1.766      ;
++--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst2'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.056 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.500        ; 0.466      ; 1.022      ;
+; 0.541 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 1.000        ; 0.466      ; 1.037      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst5'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.092 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.500        ; 0.513      ; 1.033      ;
+; 0.593 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 1.000        ; 0.513      ; 1.032      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst4'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.093 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.500        ; 0.472      ; 0.991      ;
+; 0.592 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 1.000        ; 0.472      ; 0.992      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst0'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.097 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.500        ; 0.474      ; 0.989      ;
+; 0.591 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 1.000        ; 0.474      ; 0.995      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst3'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.102 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.500        ; 0.708      ; 1.218      ;
+; 0.602 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 1.000        ; 0.708      ; 1.218      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst1'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.115 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.500        ; 0.564      ; 1.061      ;
+; 0.609 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 1.000        ; 0.564      ; 1.067      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'ripplecounter:inst|inst6'                                                                                                     ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.624 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 1.000        ; -0.024     ; 0.359      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst3'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.155 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0.000        ; 0.749      ; 1.093      ;
+; 0.634 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; -0.500       ; 0.749      ; 1.072      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst0'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.184 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0.000        ; 0.506      ; 0.879      ;
+; 0.660 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; -0.500       ; 0.506      ; 0.855      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst4'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.184 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0.000        ; 0.503      ; 0.876      ;
+; 0.661 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; -0.500       ; 0.503      ; 0.853      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst6'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.206 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst7 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 0.000        ; 0.024      ; 0.314      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst5'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.219 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0.000        ; 0.547      ; 0.955      ;
+; 0.698 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; -0.500       ; 0.547      ; 0.934      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst2'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.225 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0.000        ; 0.498      ; 0.912      ;
+; 0.697 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; -0.500       ; 0.498      ; 0.884      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'ripplecounter:inst|inst1'                                                                                                      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.235 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0.000        ; 0.599      ; 1.023      ;
+; 0.722 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; -0.500       ; 0.599      ; 1.010      ;
++-------+--------------------------+--------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                                              ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+; 0.286 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; 0.000        ; 1.192      ; 1.687      ;
+; 0.791 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; CLK         ; -0.500       ; 1.192      ; 1.692      ;
++-------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                   ;
++---------------------------+--------+-------+----------+---------+---------------------+
+; Clock                     ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack          ; -0.387 ; 0.155 ; N/A      ; N/A     ; -3.000              ;
+;  CLK                      ; -0.387 ; 0.286 ; N/A      ; N/A     ; -3.000              ;
+;  ripplecounter:inst|inst0 ; -0.269 ; 0.184 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst1 ; -0.247 ; 0.235 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst2 ; -0.333 ; 0.225 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst3 ; -0.315 ; 0.155 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst4 ; -0.274 ; 0.184 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst5 ; -0.284 ; 0.219 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst6 ; 0.317  ; 0.206 ; N/A      ; N/A     ; -1.000              ;
+; Design-wide TNS           ; -2.109 ; 0.0   ; 0.0      ; 0.0     ; -11.092             ;
+;  CLK                      ; -0.387 ; 0.000 ; N/A      ; N/A     ; -4.092              ;
+;  ripplecounter:inst|inst0 ; -0.269 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst1 ; -0.247 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst2 ; -0.333 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst3 ; -0.315 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst4 ; -0.274 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst5 ; -0.284 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  ripplecounter:inst|inst6 ; 0.000  ; 0.000 ; N/A      ; N/A     ; -1.000              ;
++---------------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; D0[0]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[1]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[2]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[3]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[4]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[5]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D0[6]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[0]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[1]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[2]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[3]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[4]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[5]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; D1[6]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; CLK            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_NCSO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; D0[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D0[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D0[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D0[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D0[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00339 V          ; 0.206 V                              ; 0.007 V                              ; 2.77e-10 s                  ; 3.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00339 V         ; 0.206 V                             ; 0.007 V                             ; 2.77e-10 s                 ; 3.24e-10 s                 ; Yes                       ; Yes                       ;
+; D0[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D0[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.34 V              ; -0.00668 V          ; 0.218 V                              ; 0.076 V                              ; 1.92e-09 s                  ; 1.81e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.34 V             ; -0.00668 V         ; 0.218 V                             ; 0.076 V                             ; 1.92e-09 s                 ; 1.81e-09 s                 ; No                        ; Yes                       ;
+; D1[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.37 V              ; -0.00861 V          ; 0.168 V                              ; 0.038 V                              ; 6.79e-10 s                  ; 6.49e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.37 V             ; -0.00861 V         ; 0.168 V                             ; 0.038 V                             ; 6.79e-10 s                 ; 6.49e-10 s                 ; No                        ; Yes                       ;
+; D1[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.37 V              ; -0.00861 V          ; 0.168 V                              ; 0.038 V                              ; 6.79e-10 s                  ; 6.49e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.37 V             ; -0.00861 V         ; 0.168 V                             ; 0.038 V                             ; 6.79e-10 s                 ; 6.49e-10 s                 ; No                        ; Yes                       ;
+; D1[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.37 V              ; -0.00861 V          ; 0.168 V                              ; 0.038 V                              ; 6.79e-10 s                  ; 6.49e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.37 V             ; -0.00861 V         ; 0.168 V                             ; 0.038 V                             ; 6.79e-10 s                 ; 6.49e-10 s                 ; No                        ; Yes                       ;
+; D1[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D1[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.37 V              ; -0.00861 V          ; 0.168 V                              ; 0.038 V                              ; 6.79e-10 s                  ; 6.49e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.37 V             ; -0.00861 V         ; 0.168 V                             ; 0.038 V                             ; 6.79e-10 s                 ; 6.49e-10 s                 ; No                        ; Yes                       ;
+; D1[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; D1[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.16e-09 V                   ; 2.4 V               ; -0.00557 V          ; 0.238 V                              ; 0.014 V                              ; 2.9e-10 s                   ; 3.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 5.16e-09 V                  ; 2.4 V              ; -0.00557 V         ; 0.238 V                             ; 0.014 V                             ; 2.9e-10 s                  ; 3.48e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.76e-09 V                   ; 2.4 V               ; -0.034 V            ; 0.102 V                              ; 0.065 V                              ; 2.49e-10 s                  ; 3.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.76e-09 V                  ; 2.4 V              ; -0.034 V           ; 0.102 V                             ; 0.065 V                             ; 2.49e-10 s                 ; 3.49e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.0335 V           ; 0.156 V                              ; 0.089 V                              ; 2.68e-10 s                  ; 2.6e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.0335 V          ; 0.156 V                             ; 0.089 V                             ; 2.68e-10 s                 ; 2.6e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; D0[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D0[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D0[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D0[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D0[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.37 V              ; -0.00606 V          ; 0.107 V                              ; 0.021 V                              ; 4.26e-10 s                  ; 4.03e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.37 V             ; -0.00606 V         ; 0.107 V                             ; 0.021 V                             ; 4.26e-10 s                 ; 4.03e-10 s                 ; Yes                       ; Yes                       ;
+; D0[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D0[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.33 V              ; -0.00286 V          ; 0.193 V                              ; 0.042 V                              ; 2.32e-09 s                  ; 2.21e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.33 V             ; -0.00286 V         ; 0.193 V                             ; 0.042 V                             ; 2.32e-09 s                 ; 2.21e-09 s                 ; Yes                       ; Yes                       ;
+; D1[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.35 V              ; -0.00662 V          ; 0.129 V                              ; 0.049 V                              ; 8.55e-10 s                  ; 8.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.35 V             ; -0.00662 V         ; 0.129 V                             ; 0.049 V                             ; 8.55e-10 s                 ; 8.01e-10 s                 ; No                        ; Yes                       ;
+; D1[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.35 V              ; -0.00662 V          ; 0.129 V                              ; 0.049 V                              ; 8.55e-10 s                  ; 8.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.35 V             ; -0.00662 V         ; 0.129 V                             ; 0.049 V                             ; 8.55e-10 s                 ; 8.01e-10 s                 ; No                        ; Yes                       ;
+; D1[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.35 V              ; -0.00662 V          ; 0.129 V                              ; 0.049 V                              ; 8.55e-10 s                  ; 8.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.35 V             ; -0.00662 V         ; 0.129 V                             ; 0.049 V                             ; 8.55e-10 s                 ; 8.01e-10 s                 ; No                        ; Yes                       ;
+; D1[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D1[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.35 V              ; -0.00662 V          ; 0.129 V                              ; 0.049 V                              ; 8.55e-10 s                  ; 8.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.35 V             ; -0.00662 V         ; 0.129 V                             ; 0.049 V                             ; 8.55e-10 s                 ; 8.01e-10 s                 ; No                        ; Yes                       ;
+; D1[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; D1[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.13e-07 V                   ; 2.36 V              ; -0.00623 V          ; 0.121 V                              ; 0.03 V                               ; 4.4e-10 s                   ; 4.28e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 8.13e-07 V                  ; 2.36 V             ; -0.00623 V         ; 0.121 V                             ; 0.03 V                              ; 4.4e-10 s                  ; 4.28e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.93e-07 V                   ; 2.37 V              ; -0.0278 V           ; 0.106 V                              ; 0.115 V                              ; 2.69e-10 s                  ; 4.05e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.93e-07 V                  ; 2.37 V             ; -0.0278 V          ; 0.106 V                             ; 0.115 V                             ; 2.69e-10 s                 ; 4.05e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.76e-07 V                   ; 2.36 V              ; -0.00524 V          ; 0.088 V                              ; 0.006 V                              ; 4.05e-10 s                  ; 3.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.76e-07 V                  ; 2.36 V             ; -0.00524 V         ; 0.088 V                             ; 0.006 V                             ; 4.05e-10 s                 ; 3.35e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; D0[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D0[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D0[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D0[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D0[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.73 V              ; -0.0205 V           ; 0.17 V                               ; 0.027 V                              ; 2.58e-10 s                  ; 2.57e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.73 V             ; -0.0205 V          ; 0.17 V                              ; 0.027 V                             ; 2.58e-10 s                 ; 2.57e-10 s                 ; Yes                       ; Yes                       ;
+; D0[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D0[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.65 V              ; -0.0115 V           ; 0.219 V                              ; 0.115 V                              ; 1.64e-09 s                  ; 1.57e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.65 V             ; -0.0115 V          ; 0.219 V                             ; 0.115 V                             ; 1.64e-09 s                 ; 1.57e-09 s                 ; No                        ; Yes                       ;
+; D1[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.71 V              ; -0.0171 V           ; 0.273 V                              ; 0.065 V                              ; 4.95e-10 s                  ; 5.37e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.71 V             ; -0.0171 V          ; 0.273 V                             ; 0.065 V                             ; 4.95e-10 s                 ; 5.37e-10 s                 ; No                        ; Yes                       ;
+; D1[1]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.71 V              ; -0.0171 V           ; 0.273 V                              ; 0.065 V                              ; 4.95e-10 s                  ; 5.37e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.71 V             ; -0.0171 V          ; 0.273 V                             ; 0.065 V                             ; 4.95e-10 s                 ; 5.37e-10 s                 ; No                        ; Yes                       ;
+; D1[2]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.71 V              ; -0.0171 V           ; 0.273 V                              ; 0.065 V                              ; 4.95e-10 s                  ; 5.37e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.71 V             ; -0.0171 V          ; 0.273 V                             ; 0.065 V                             ; 4.95e-10 s                 ; 5.37e-10 s                 ; No                        ; Yes                       ;
+; D1[3]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D1[4]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.71 V              ; -0.0171 V           ; 0.273 V                              ; 0.065 V                              ; 4.95e-10 s                  ; 5.37e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.71 V             ; -0.0171 V          ; 0.273 V                             ; 0.065 V                             ; 4.95e-10 s                 ; 5.37e-10 s                 ; No                        ; Yes                       ;
+; D1[5]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; D1[6]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.16e-08 V                   ; 2.72 V              ; -0.0199 V           ; 0.186 V                              ; 0.027 V                              ; 2.63e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.16e-08 V                  ; 2.72 V             ; -0.0199 V          ; 0.186 V                             ; 0.027 V                             ; 2.63e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.06e-08 V                   ; 2.86 V              ; -0.0341 V           ; 0.364 V                              ; 0.046 V                              ; 1.17e-10 s                  ; 2.6e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 3.06e-08 V                  ; 2.86 V             ; -0.0341 V          ; 0.364 V                             ; 0.046 V                             ; 1.17e-10 s                 ; 2.6e-10 s                  ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.81e-08 V                   ; 2.72 V              ; -0.0548 V           ; 0.144 V                              ; 0.087 V                              ; 2.55e-10 s                  ; 2.14e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.81e-08 V                  ; 2.72 V             ; -0.0548 V          ; 0.144 V                             ; 0.087 V                             ; 2.55e-10 s                 ; 2.14e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                 ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; ripplecounter:inst|inst0 ; CLK                      ; 1        ; 1        ; 0        ; 0        ;
+; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 0        ; 0        ; 0        ; 1        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                  ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; ripplecounter:inst|inst0 ; CLK                      ; 1        ; 1        ; 0        ; 0        ;
+; ripplecounter:inst|inst1 ; ripplecounter:inst|inst0 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst2 ; ripplecounter:inst|inst1 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst3 ; ripplecounter:inst|inst2 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst4 ; ripplecounter:inst|inst3 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst5 ; ripplecounter:inst|inst4 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst6 ; ripplecounter:inst|inst5 ; 0        ; 0        ; 1        ; 1        ;
+; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; 0        ; 0        ; 0        ; 1        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 56    ; 56   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------+
+; Clock Status Summary                                                     ;
++--------------------------+--------------------------+------+-------------+
+; Target                   ; Clock                    ; Type ; Status      ;
++--------------------------+--------------------------+------+-------------+
+; CLK                      ; CLK                      ; Base ; Constrained ;
+; ripplecounter:inst|inst0 ; ripplecounter:inst|inst0 ; Base ; Constrained ;
+; ripplecounter:inst|inst1 ; ripplecounter:inst|inst1 ; Base ; Constrained ;
+; ripplecounter:inst|inst2 ; ripplecounter:inst|inst2 ; Base ; Constrained ;
+; ripplecounter:inst|inst3 ; ripplecounter:inst|inst3 ; Base ; Constrained ;
+; ripplecounter:inst|inst4 ; ripplecounter:inst|inst4 ; Base ; Constrained ;
+; ripplecounter:inst|inst5 ; ripplecounter:inst|inst5 ; Base ; Constrained ;
+; ripplecounter:inst|inst6 ; ripplecounter:inst|inst6 ; Base ; Constrained ;
++--------------------------+--------------------------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; D0[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; D0[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; D1[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 15 02:14:36 2021
+Info: Command: quartus_sta ripplecounter -c ripplecounter
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ripplecounter.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst2 ripplecounter:inst|inst2
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst1 ripplecounter:inst|inst1
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst0 ripplecounter:inst|inst0
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst6 ripplecounter:inst|inst6
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst5 ripplecounter:inst|inst5
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst4 ripplecounter:inst|inst4
+    Info (332105): create_clock -period 1.000 -name ripplecounter:inst|inst3 ripplecounter:inst|inst3
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.387
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.387              -0.387 CLK 
+    Info (332119):    -0.333              -0.333 ripplecounter:inst|inst2 
+    Info (332119):    -0.315              -0.315 ripplecounter:inst|inst3 
+    Info (332119):    -0.284              -0.284 ripplecounter:inst|inst5 
+    Info (332119):    -0.274              -0.274 ripplecounter:inst|inst4 
+    Info (332119):    -0.269              -0.269 ripplecounter:inst|inst0 
+    Info (332119):    -0.247              -0.247 ripplecounter:inst|inst1 
+    Info (332119):     0.317               0.000 ripplecounter:inst|inst6 
+Info (332146): Worst-case hold slack is 0.376
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.376               0.000 ripplecounter:inst|inst4 
+    Info (332119):     0.378               0.000 ripplecounter:inst|inst0 
+    Info (332119):     0.378               0.000 ripplecounter:inst|inst3 
+    Info (332119):     0.384               0.000 ripplecounter:inst|inst6 
+    Info (332119):     0.433               0.000 ripplecounter:inst|inst5 
+    Info (332119):     0.442               0.000 CLK 
+    Info (332119):     0.445               0.000 ripplecounter:inst|inst2 
+    Info (332119):     0.491               0.000 ripplecounter:inst|inst1 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -4.000 CLK 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst0 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst1 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst2 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst3 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst4 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst5 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst6 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.268
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.268              -0.268 CLK 
+    Info (332119):    -0.245              -0.245 ripplecounter:inst|inst2 
+    Info (332119):    -0.225              -0.225 ripplecounter:inst|inst3 
+    Info (332119):    -0.206              -0.206 ripplecounter:inst|inst5 
+    Info (332119):    -0.188              -0.188 ripplecounter:inst|inst1 
+    Info (332119):    -0.188              -0.188 ripplecounter:inst|inst4 
+    Info (332119):    -0.184              -0.184 ripplecounter:inst|inst0 
+    Info (332119):     0.398               0.000 ripplecounter:inst|inst6 
+Info (332146): Worst-case hold slack is 0.340
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.340               0.000 ripplecounter:inst|inst0 
+    Info (332119):     0.341               0.000 ripplecounter:inst|inst6 
+    Info (332119):     0.342               0.000 ripplecounter:inst|inst3 
+    Info (332119):     0.343               0.000 ripplecounter:inst|inst4 
+    Info (332119):     0.363               0.000 CLK 
+    Info (332119):     0.395               0.000 ripplecounter:inst|inst5 
+    Info (332119):     0.400               0.000 ripplecounter:inst|inst2 
+    Info (332119):     0.454               0.000 ripplecounter:inst|inst1 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -4.000 CLK 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst0 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst1 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst2 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst3 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst4 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst5 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst6 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.032
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.032              -0.032 CLK 
+    Info (332119):     0.056               0.000 ripplecounter:inst|inst2 
+    Info (332119):     0.092               0.000 ripplecounter:inst|inst5 
+    Info (332119):     0.093               0.000 ripplecounter:inst|inst4 
+    Info (332119):     0.097               0.000 ripplecounter:inst|inst0 
+    Info (332119):     0.102               0.000 ripplecounter:inst|inst3 
+    Info (332119):     0.115               0.000 ripplecounter:inst|inst1 
+    Info (332119):     0.624               0.000 ripplecounter:inst|inst6 
+Info (332146): Worst-case hold slack is 0.155
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.155               0.000 ripplecounter:inst|inst3 
+    Info (332119):     0.184               0.000 ripplecounter:inst|inst0 
+    Info (332119):     0.184               0.000 ripplecounter:inst|inst4 
+    Info (332119):     0.206               0.000 ripplecounter:inst|inst6 
+    Info (332119):     0.219               0.000 ripplecounter:inst|inst5 
+    Info (332119):     0.225               0.000 ripplecounter:inst|inst2 
+    Info (332119):     0.235               0.000 ripplecounter:inst|inst1 
+    Info (332119):     0.286               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -4.092 CLK 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst0 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst1 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst2 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst3 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst4 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst5 
+    Info (332119):    -1.000              -1.000 ripplecounter:inst|inst6 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 609 megabytes
+    Info: Processing ended: Thu Apr 15 02:14:38 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

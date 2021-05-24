@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri May 21 02:32:41 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : unidade_de_controle_neander
+Top-level Entity Name : unidade_de_controle_neander
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 40 / 6,272 ( < 1 % )
+    Total combinational functions : 40 / 6,272 ( < 1 % )
+    Dedicated logic registers : 3 / 6,272 ( < 1 % )
+Total registers : 3
+Total pins : 25 / 92 ( 27 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

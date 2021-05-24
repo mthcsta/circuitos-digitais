@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/intelFPGA_lite/20.1/mux2x1OR/mux2x1or.bdf
+source_file = 1, D:/intelFPGA_lite/20.1/mux2x1OR/Waveform.vwf
+source_file = 1, D:/intelFPGA_lite/20.1/mux2x1OR/db/mux2x1or.cbx.xml
+design_name = mux2x1or
+instance = comp, \S~output , S~output, mux2x1or, 1
+instance = comp, \C~input , C~input, mux2x1or, 1
+instance = comp, \A~input , A~input, mux2x1or, 1
+instance = comp, \D~input , D~input, mux2x1or, 1
+instance = comp, \inst~0 , inst~0, mux2x1or, 1
+instance = comp, \B~input , B~input, mux2x1or, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, mux2x1or, 1

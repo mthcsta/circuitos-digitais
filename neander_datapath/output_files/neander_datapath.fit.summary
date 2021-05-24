@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr 26 19:12:08 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : neander_datapath
+Top-level Entity Name : neander_datapath
+Family : Cyclone IV E
+Device : EP4CE6F17C6
+Timing Models : Final
+Total logic elements : 78 / 6,272 ( 1 % )
+    Total combinational functions : 59 / 6,272 ( < 1 % )
+    Dedicated logic registers : 50 / 6,272 ( < 1 % )
+Total registers : 50
+Total pins : 71 / 180 ( 39 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

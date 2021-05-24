@@ -1,0 +1,99 @@
+|multiplexador
+OUT[0] <= multiplexador-2-1:inst.f
+OUT[1] <= multiplexador-2-1:inst1.f
+OUT[2] <= multiplexador-2-1:inst2.f
+OUT[3] <= multiplexador-2-1:inst3.f
+OUT[4] <= multiplexador-2-1:inst6.f
+OUT[5] <= multiplexador-2-1:inst4.f
+OUT[6] <= multiplexador-2-1:inst5.f
+OUT[7] <= multiplexador-2-1:inst7.f
+IN1[0] => multiplexador-2-1:inst.w0
+IN1[1] => multiplexador-2-1:inst1.w0
+IN1[2] => multiplexador-2-1:inst2.w0
+IN1[3] => multiplexador-2-1:inst3.w0
+IN1[4] => multiplexador-2-1:inst6.w0
+IN1[5] => multiplexador-2-1:inst4.w0
+IN1[6] => multiplexador-2-1:inst5.w0
+IN1[7] => multiplexador-2-1:inst7.w0
+S => multiplexador-2-1:inst.S
+S => multiplexador-2-1:inst1.S
+S => multiplexador-2-1:inst2.S
+S => multiplexador-2-1:inst3.S
+S => multiplexador-2-1:inst6.S
+S => multiplexador-2-1:inst4.S
+S => multiplexador-2-1:inst5.S
+S => multiplexador-2-1:inst7.S
+IN2[0] => multiplexador-2-1:inst.w1
+IN2[1] => multiplexador-2-1:inst1.w1
+IN2[2] => multiplexador-2-1:inst2.w1
+IN2[3] => multiplexador-2-1:inst3.w1
+IN2[4] => multiplexador-2-1:inst6.w1
+IN2[5] => multiplexador-2-1:inst4.w1
+IN2[6] => multiplexador-2-1:inst5.w1
+IN2[7] => multiplexador-2-1:inst7.w1
+
+
+|multiplexador|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|multiplexador|multiplexador-2-1:inst7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+

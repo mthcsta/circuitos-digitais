@@ -1,0 +1,293 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "N",
+					"strict" : false
+				},
+				{
+					"name" : "Z",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataAC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataPC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRDMr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataREM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataRI[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write[7]",
+					"strict" : false
+				},
+				{
+					"name" : "write[6]",
+					"strict" : false
+				},
+				{
+					"name" : "write[5]",
+					"strict" : false
+				},
+				{
+					"name" : "write[4]",
+					"strict" : false
+				},
+				{
+					"name" : "write[3]",
+					"strict" : false
+				},
+				{
+					"name" : "write[2]",
+					"strict" : false
+				},
+				{
+					"name" : "write[1]",
+					"strict" : false
+				},
+				{
+					"name" : "write[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "cargaNZ",
+					"strict" : false
+				},
+				{
+					"name" : "cargaAC",
+					"strict" : false
+				},
+				{
+					"name" : "cargaPC",
+					"strict" : false
+				},
+				{
+					"name" : "incPC",
+					"strict" : false
+				},
+				{
+					"name" : "read[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cargaRDMr",
+					"strict" : false
+				},
+				{
+					"name" : "read[6]",
+					"strict" : false
+				},
+				{
+					"name" : "read[5]",
+					"strict" : false
+				},
+				{
+					"name" : "read[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read[3]",
+					"strict" : false
+				},
+				{
+					"name" : "read[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read[0]",
+					"strict" : false
+				},
+				{
+					"name" : "selMUX16x8",
+					"strict" : false
+				},
+				{
+					"name" : "cargaREM",
+					"strict" : false
+				},
+				{
+					"name" : "cargaRI",
+					"strict" : false
+				},
+				{
+					"name" : "cargaRDMw",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

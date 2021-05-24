@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/intelFPGA_lite/20.1/somadorcompleto/meiosomador.bdf
+source_file = 1, D:/intelFPGA_lite/20.1/somadorcompleto/somadorcompleto.bdf
+source_file = 1, D:/intelFPGA_lite/20.1/somadorcompleto/db/somadorcompleto.cbx.xml
+design_name = somadorcompleto
+instance = comp, \S~output , S~output, somadorcompleto, 1
+instance = comp, \C_out~output , C_out~output, somadorcompleto, 1
+instance = comp, \Y~input , Y~input, somadorcompleto, 1
+instance = comp, \C_in~input , C_in~input, somadorcompleto, 1
+instance = comp, \X~input , X~input, somadorcompleto, 1
+instance = comp, \inst7|inst2 , inst7|inst2, somadorcompleto, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, somadorcompleto, 1

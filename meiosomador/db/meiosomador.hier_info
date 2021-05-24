@@ -1,0 +1,9 @@
+|meiosomador
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1555 @@
+|neander_datapath
+N <= NZ:NZ.N
+CLK => NZ:NZ.CLK
+CLK => registrador:AC.CLK
+CLK => registrador:RDMr.CLK
+CLK => registradorPC:PC.CLK
+CLK => registrador:REM.CLK
+CLK => registrador:RI.CLK
+CLK => registrador:RDMw.CLK
+cargaNZ => NZ:NZ.cargaNZ
+OP[2] => ula_neander:inst9.OP[2]
+OP[1] => ula_neander:inst9.OP[1]
+OP[0] => ula_neander:inst9.OP[0]
+cargaAC => registrador:AC.LDN
+cargaRDMr => registrador:RDMr.LDN
+read[0] => registrador:RDMr.dataIn[0]
+read[1] => registrador:RDMr.dataIn[1]
+read[2] => registrador:RDMr.dataIn[2]
+read[3] => registrador:RDMr.dataIn[3]
+read[4] => registrador:RDMr.dataIn[4]
+read[5] => registrador:RDMr.dataIn[5]
+read[6] => registrador:RDMr.dataIn[6]
+read[7] => registrador:RDMr.dataIn[7]
+Z <= NZ:NZ.Z
+dataAC[0] <= registrador:AC.dataOut[0]
+dataAC[1] <= registrador:AC.dataOut[1]
+dataAC[2] <= registrador:AC.dataOut[2]
+dataAC[3] <= registrador:AC.dataOut[3]
+dataAC[4] <= registrador:AC.dataOut[4]
+dataAC[5] <= registrador:AC.dataOut[5]
+dataAC[6] <= registrador:AC.dataOut[6]
+dataAC[7] <= registrador:AC.dataOut[7]
+dataPC[7] <= registradorPC:PC.dataOut[0]
+dataPC[6] <= registradorPC:PC.dataOut[1]
+dataPC[5] <= registradorPC:PC.dataOut[2]
+dataPC[4] <= registradorPC:PC.dataOut[3]
+dataPC[3] <= registradorPC:PC.dataOut[4]
+dataPC[2] <= registradorPC:PC.dataOut[5]
+dataPC[1] <= registradorPC:PC.dataOut[6]
+dataPC[0] <= registradorPC:PC.dataOut[7]
+cargaPC => registradorPC:PC.LDN
+incPC => registradorPC:PC.INC
+dataRDMr[0] <= registrador:RDMr.dataOut[0]
+dataRDMr[1] <= registrador:RDMr.dataOut[1]
+dataRDMr[2] <= registrador:RDMr.dataOut[2]
+dataRDMr[3] <= registrador:RDMr.dataOut[3]
+dataRDMr[4] <= registrador:RDMr.dataOut[4]
+dataRDMr[5] <= registrador:RDMr.dataOut[5]
+dataRDMr[6] <= registrador:RDMr.dataOut[6]
+dataRDMr[7] <= registrador:RDMr.dataOut[7]
+dataREM[0] <= registrador:REM.dataOut[0]
+dataREM[1] <= registrador:REM.dataOut[1]
+dataREM[2] <= registrador:REM.dataOut[2]
+dataREM[3] <= registrador:REM.dataOut[3]
+dataREM[4] <= registrador:REM.dataOut[4]
+dataREM[5] <= registrador:REM.dataOut[5]
+dataREM[6] <= registrador:REM.dataOut[6]
+dataREM[7] <= registrador:REM.dataOut[7]
+cargaREM => registrador:REM.LDN
+selMUX16x8 => multiplexador:MUX16x8.S
+dataRI[0] <= registrador:RI.dataOut[0]
+dataRI[1] <= registrador:RI.dataOut[1]
+dataRI[2] <= registrador:RI.dataOut[2]
+dataRI[3] <= registrador:RI.dataOut[3]
+dataRI[4] <= registrador:RI.dataOut[4]
+dataRI[5] <= registrador:RI.dataOut[5]
+dataRI[6] <= registrador:RI.dataOut[6]
+dataRI[7] <= registrador:RI.dataOut[7]
+cargaRI => registrador:RI.LDN
+cargaRDMw => registrador:RDMw.LDN
+write[0] <= registrador:RDMw.dataOut[0]
+write[1] <= registrador:RDMw.dataOut[1]
+write[2] <= registrador:RDMw.dataOut[2]
+write[3] <= registrador:RDMw.dataOut[3]
+write[4] <= registrador:RDMw.dataOut[4]
+write[5] <= registrador:RDMw.dataOut[5]
+write[6] <= registrador:RDMw.dataOut[6]
+write[7] <= registrador:RDMw.dataOut[7]
+
+
+|neander_datapath|NZ:NZ
+N <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst2.CLK
+CLK => inst3.CLK
+cargaNZ => multiplexador-2-1:Nmux.S
+cargaNZ => multiplexador-2-1:Zmux.S
+data[0] => inst1.IN7
+data[1] => inst1.IN6
+data[2] => inst1.IN4
+data[3] => inst1.IN5
+data[4] => inst1.IN3
+data[5] => inst1.IN1
+data[6] => inst1.IN2
+data[7] => multiplexador-2-1:Nmux.w1
+data[7] => inst1.IN0
+Z <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|NZ:NZ|multiplexador-2-1:Nmux
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|NZ:NZ|multiplexador-2-1:Zmux
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9
+CarryOut <= ulaneander1bitFA:inst10.C_out
+X[0] => ulaneander1bit:inst.X
+X[1] => ulaneander1bitFA:inst4.X
+X[2] => ulaneander1bitFA:inst5.X
+X[3] => ulaneander1bitFA:inst6.X
+X[4] => ulaneander1bitFA:inst7.X
+X[5] => ulaneander1bitFA:inst8.X
+X[6] => ulaneander1bitFA:inst9.X
+X[7] => ulaneander1bitFA:inst10.X
+Y[0] => ulaneander1bit:inst.Y
+Y[1] => ulaneander1bitFA:inst4.Y
+Y[2] => ulaneander1bitFA:inst5.Y
+Y[3] => ulaneander1bitFA:inst6.Y
+Y[4] => ulaneander1bitFA:inst7.Y
+Y[5] => ulaneander1bitFA:inst8.Y
+Y[6] => ulaneander1bitFA:inst9.Y
+Y[7] => ulaneander1bitFA:inst10.Y
+OP[2] => ulaneander1bit:inst.OP[2]
+OP[2] => ulaneander1bitFA:inst4.OP[2]
+OP[2] => ulaneander1bitFA:inst5.OP[2]
+OP[2] => ulaneander1bitFA:inst6.OP[2]
+OP[2] => ulaneander1bitFA:inst7.OP[2]
+OP[2] => ulaneander1bitFA:inst8.OP[2]
+OP[2] => ulaneander1bitFA:inst9.OP[2]
+OP[2] => ulaneander1bitFA:inst10.OP[2]
+OP[1] => ulaneander1bit:inst.OP[1]
+OP[1] => ulaneander1bitFA:inst4.OP[1]
+OP[1] => ulaneander1bitFA:inst5.OP[1]
+OP[1] => ulaneander1bitFA:inst6.OP[1]
+OP[1] => ulaneander1bitFA:inst7.OP[1]
+OP[1] => ulaneander1bitFA:inst8.OP[1]
+OP[1] => ulaneander1bitFA:inst9.OP[1]
+OP[1] => ulaneander1bitFA:inst10.OP[1]
+OP[0] => ulaneander1bit:inst.OP[0]
+OP[0] => ulaneander1bitFA:inst4.OP[0]
+OP[0] => ulaneander1bitFA:inst5.OP[0]
+OP[0] => ulaneander1bitFA:inst6.OP[0]
+OP[0] => ulaneander1bitFA:inst7.OP[0]
+OP[0] => ulaneander1bitFA:inst8.OP[0]
+OP[0] => ulaneander1bitFA:inst9.OP[0]
+OP[0] => ulaneander1bitFA:inst10.OP[0]
+F[0] <= ulaneander1bit:inst.F
+F[1] <= ulaneander1bitFA:inst4.F
+F[2] <= ulaneander1bitFA:inst5.F
+F[3] <= ulaneander1bitFA:inst6.F
+F[4] <= ulaneander1bitFA:inst7.F
+F[5] <= ulaneander1bitFA:inst8.F
+F[6] <= ulaneander1bitFA:inst9.F
+F[7] <= ulaneander1bitFA:inst10.F
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst10|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst9|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst8|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst7|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst6|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst5|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4
+F <= mux5x1:mux.R
+X => somadorcompleto:inst.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => somadorcompleto:inst.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+C_in => somadorcompleto:inst.C_in
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C_out <= somadorcompleto:inst.C_out
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|somadorcompleto:inst
+S <= meiosomador:inst7.S
+X => meiosomador:inst.X
+Y => meiosomador:inst.Y
+C_in => meiosomador:inst7.Y
+C_out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|somadorcompleto:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bitFA:inst4|somadorcompleto:inst|meiosomador:inst
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst
+F <= mux5x1:mux.R
+X => meiosomador:inst7.X
+X => inst4.IN1
+X => inst5.IN0
+X => inst6.IN0
+Y => meiosomador:inst7.Y
+Y => inst4.IN0
+Y => inst5.IN1
+Y => mux5x1:mux.Y
+OP[2] => mux5x1:mux.OP[2]
+OP[1] => mux5x1:mux.OP[1]
+OP[0] => mux5x1:mux.OP[0]
+C <= meiosomador:inst7.A
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|mux5x1:mux
+R <= multiplexador-2-1:inst6.f
+SUM => multiplexador-2-1:inst.w0
+OP[2] => multiplexador-2-1:inst6.S
+OP[1] => multiplexador-2-1:inst5.S
+OP[0] => multiplexador-2-1:inst.S
+OP[0] => multiplexador-2-1:inst4.S
+AND => multiplexador-2-1:inst.w1
+OR => multiplexador-2-1:inst4.w0
+NOTX => multiplexador-2-1:inst4.w1
+Y => multiplexador-2-1:inst6.w1
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|mux5x1:mux|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|ula_neander:inst9|ulaneander1bit:inst|meiosomador:inst7
+S <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst.IN0
+Y => inst2.IN1
+Y => inst.IN1
+A <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|neander_datapath|registrador:AC
+dataOut[0] <= dff0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dff1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dff2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dff3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dff4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dff5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dff6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dff7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => dff0.CLK
+CLK => dff1.CLK
+CLK => dff2.CLK
+CLK => dff3.CLK
+CLK => dff4.CLK
+CLK => dff5.CLK
+CLK => dff6.CLK
+CLK => dff7.CLK
+LDN => multiplexador-2-1:bit0.S
+LDN => multiplexador-2-1:bit1.S
+LDN => multiplexador-2-1:bit2.S
+LDN => multiplexador-2-1:bit3.S
+LDN => multiplexador-2-1:bit4.S
+LDN => multiplexador-2-1:bit5.S
+LDN => multiplexador-2-1:bit6.S
+LDN => multiplexador-2-1:bit7.S
+dataIn[0] => multiplexador-2-1:bit0.w1
+dataIn[1] => multiplexador-2-1:bit1.w1
+dataIn[2] => multiplexador-2-1:bit2.w1
+dataIn[3] => multiplexador-2-1:bit3.w1
+dataIn[4] => multiplexador-2-1:bit4.w1
+dataIn[5] => multiplexador-2-1:bit5.w1
+dataIn[6] => multiplexador-2-1:bit6.w1
+dataIn[7] => multiplexador-2-1:bit7.w1
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit0
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:AC|multiplexador-2-1:bit7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr
+dataOut[0] <= dff0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dff1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dff2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dff3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dff4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dff5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dff6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dff7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => dff0.CLK
+CLK => dff1.CLK
+CLK => dff2.CLK
+CLK => dff3.CLK
+CLK => dff4.CLK
+CLK => dff5.CLK
+CLK => dff6.CLK
+CLK => dff7.CLK
+LDN => multiplexador-2-1:bit0.S
+LDN => multiplexador-2-1:bit1.S
+LDN => multiplexador-2-1:bit2.S
+LDN => multiplexador-2-1:bit3.S
+LDN => multiplexador-2-1:bit4.S
+LDN => multiplexador-2-1:bit5.S
+LDN => multiplexador-2-1:bit6.S
+LDN => multiplexador-2-1:bit7.S
+dataIn[0] => multiplexador-2-1:bit0.w1
+dataIn[1] => multiplexador-2-1:bit1.w1
+dataIn[2] => multiplexador-2-1:bit2.w1
+dataIn[3] => multiplexador-2-1:bit3.w1
+dataIn[4] => multiplexador-2-1:bit4.w1
+dataIn[5] => multiplexador-2-1:bit5.w1
+dataIn[6] => multiplexador-2-1:bit6.w1
+dataIn[7] => multiplexador-2-1:bit7.w1
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit0
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMr|multiplexador-2-1:bit7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC
+dataOut[0] <= inst0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= inst4A0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+INC => multiplexador-2-1:inst2.w0
+INC => inst.IN0
+LDN => multiplexador-2-1:inst2.S
+LDN => inst1.IN1
+LDN => multiplexador-2-1:inst3.S
+LDN => inst50.IN1
+LDN => multiplexador-2-1:inst35.S
+LDN => inst56.IN1
+LDN => multiplexador-2-1:inst34.S
+LDN => inst55.IN1
+LDN => multiplexador-2-1:inst33.S
+LDN => inst54.IN1
+LDN => multiplexador-2-1:inst30.S
+LDN => inst51.IN1
+LDN => multiplexador-2-1:inst31.S
+LDN => inst52.IN1
+LDN => multiplexador-2-1:inst32.S
+LDN => inst53.IN1
+dataIn[0] => multiplexador-2-1:inst2.w1
+dataIn[1] => multiplexador-2-1:inst3.w1
+dataIn[2] => multiplexador-2-1:inst30.w1
+dataIn[3] => multiplexador-2-1:inst31.w1
+dataIn[4] => multiplexador-2-1:inst32.w1
+dataIn[5] => multiplexador-2-1:inst33.w1
+dataIn[6] => multiplexador-2-1:inst34.w1
+dataIn[7] => multiplexador-2-1:inst35.w1
+CLK => inst0.CLK
+CLK => inst4A0.CLK
+CLK => inst45.CLK
+CLK => inst44.CLK
+CLK => inst43.CLK
+CLK => inst40.CLK
+CLK => inst41.CLK
+CLK => inst42.CLK
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst35
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst34
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst33
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst30
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst31
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registradorPC:PC|multiplexador-2-1:inst32
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM
+dataOut[0] <= dff0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dff1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dff2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dff3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dff4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dff5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dff6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dff7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => dff0.CLK
+CLK => dff1.CLK
+CLK => dff2.CLK
+CLK => dff3.CLK
+CLK => dff4.CLK
+CLK => dff5.CLK
+CLK => dff6.CLK
+CLK => dff7.CLK
+LDN => multiplexador-2-1:bit0.S
+LDN => multiplexador-2-1:bit1.S
+LDN => multiplexador-2-1:bit2.S
+LDN => multiplexador-2-1:bit3.S
+LDN => multiplexador-2-1:bit4.S
+LDN => multiplexador-2-1:bit5.S
+LDN => multiplexador-2-1:bit6.S
+LDN => multiplexador-2-1:bit7.S
+dataIn[0] => multiplexador-2-1:bit0.w1
+dataIn[1] => multiplexador-2-1:bit1.w1
+dataIn[2] => multiplexador-2-1:bit2.w1
+dataIn[3] => multiplexador-2-1:bit3.w1
+dataIn[4] => multiplexador-2-1:bit4.w1
+dataIn[5] => multiplexador-2-1:bit5.w1
+dataIn[6] => multiplexador-2-1:bit6.w1
+dataIn[7] => multiplexador-2-1:bit7.w1
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit0
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:REM|multiplexador-2-1:bit7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8
+OUT[0] <= multiplexador-2-1:inst.f
+OUT[1] <= multiplexador-2-1:inst1.f
+OUT[2] <= multiplexador-2-1:inst2.f
+OUT[3] <= multiplexador-2-1:inst3.f
+OUT[4] <= multiplexador-2-1:inst6.f
+OUT[5] <= multiplexador-2-1:inst4.f
+OUT[6] <= multiplexador-2-1:inst5.f
+OUT[7] <= multiplexador-2-1:inst7.f
+IN1[0] => multiplexador-2-1:inst.w0
+IN1[1] => multiplexador-2-1:inst1.w0
+IN1[2] => multiplexador-2-1:inst2.w0
+IN1[3] => multiplexador-2-1:inst3.w0
+IN1[4] => multiplexador-2-1:inst6.w0
+IN1[5] => multiplexador-2-1:inst4.w0
+IN1[6] => multiplexador-2-1:inst5.w0
+IN1[7] => multiplexador-2-1:inst7.w0
+S => multiplexador-2-1:inst.S
+S => multiplexador-2-1:inst1.S
+S => multiplexador-2-1:inst2.S
+S => multiplexador-2-1:inst3.S
+S => multiplexador-2-1:inst6.S
+S => multiplexador-2-1:inst4.S
+S => multiplexador-2-1:inst5.S
+S => multiplexador-2-1:inst7.S
+IN2[0] => multiplexador-2-1:inst.w1
+IN2[1] => multiplexador-2-1:inst1.w1
+IN2[2] => multiplexador-2-1:inst2.w1
+IN2[3] => multiplexador-2-1:inst3.w1
+IN2[4] => multiplexador-2-1:inst6.w1
+IN2[5] => multiplexador-2-1:inst4.w1
+IN2[6] => multiplexador-2-1:inst5.w1
+IN2[7] => multiplexador-2-1:inst7.w1
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|multiplexador:MUX16x8|multiplexador-2-1:inst7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI
+dataOut[0] <= dff0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dff1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dff2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dff3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dff4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dff5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dff6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dff7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => dff0.CLK
+CLK => dff1.CLK
+CLK => dff2.CLK
+CLK => dff3.CLK
+CLK => dff4.CLK
+CLK => dff5.CLK
+CLK => dff6.CLK
+CLK => dff7.CLK
+LDN => multiplexador-2-1:bit0.S
+LDN => multiplexador-2-1:bit1.S
+LDN => multiplexador-2-1:bit2.S
+LDN => multiplexador-2-1:bit3.S
+LDN => multiplexador-2-1:bit4.S
+LDN => multiplexador-2-1:bit5.S
+LDN => multiplexador-2-1:bit6.S
+LDN => multiplexador-2-1:bit7.S
+dataIn[0] => multiplexador-2-1:bit0.w1
+dataIn[1] => multiplexador-2-1:bit1.w1
+dataIn[2] => multiplexador-2-1:bit2.w1
+dataIn[3] => multiplexador-2-1:bit3.w1
+dataIn[4] => multiplexador-2-1:bit4.w1
+dataIn[5] => multiplexador-2-1:bit5.w1
+dataIn[6] => multiplexador-2-1:bit6.w1
+dataIn[7] => multiplexador-2-1:bit7.w1
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit0
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RI|multiplexador-2-1:bit7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw
+dataOut[0] <= dff0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dff1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dff2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dff3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dff4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dff5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dff6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dff7.DB_MAX_OUTPUT_PORT_TYPE
+CLK => dff0.CLK
+CLK => dff1.CLK
+CLK => dff2.CLK
+CLK => dff3.CLK
+CLK => dff4.CLK
+CLK => dff5.CLK
+CLK => dff6.CLK
+CLK => dff7.CLK
+LDN => multiplexador-2-1:bit0.S
+LDN => multiplexador-2-1:bit1.S
+LDN => multiplexador-2-1:bit2.S
+LDN => multiplexador-2-1:bit3.S
+LDN => multiplexador-2-1:bit4.S
+LDN => multiplexador-2-1:bit5.S
+LDN => multiplexador-2-1:bit6.S
+LDN => multiplexador-2-1:bit7.S
+dataIn[0] => multiplexador-2-1:bit0.w1
+dataIn[1] => multiplexador-2-1:bit1.w1
+dataIn[2] => multiplexador-2-1:bit2.w1
+dataIn[3] => multiplexador-2-1:bit3.w1
+dataIn[4] => multiplexador-2-1:bit4.w1
+dataIn[5] => multiplexador-2-1:bit5.w1
+dataIn[6] => multiplexador-2-1:bit6.w1
+dataIn[7] => multiplexador-2-1:bit7.w1
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit0
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit1
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit2
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit3
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit4
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit5
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit6
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+
+|neander_datapath|registrador:RDMw|multiplexador-2-1:bit7
+f <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S => inst1.IN0
+S => inst2.IN0
+w1 => inst1.IN1
+w0 => inst.IN0
+
+

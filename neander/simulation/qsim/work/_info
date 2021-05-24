@@ -1,0 +1,150 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/20.1/neander/simulation/qsim
+v\contador-3bits 
+!s110 1621815033
+!i10b 1
+!s100 IgiHGQj>z;AQ]HkzzB`Ib1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IhYaX^10J0i3zOgdz3Si5l1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1621815032
+Z3 8neander.vo
+Z4 Fneander.vo
+!i122 26
+Z5 L0 32 261
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1621815033.000000
+Z7 !s107 neander.vo|
+Z8 !s90 -work|work|neander.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@134contador-3bits@040
+vhard_block
+Z11 !s110 1621876107
+!i10b 1
+!s100 m[_H1`?OGKgoo:9>ZSTYo1
+R1
+I:OT0ED:4^<O0Oole^Eik81
+R2
+R0
+Z12 w1621876105
+R3
+R4
+!i122 80
+L0 4259 34
+R6
+r1
+!s85 0
+31
+Z13 !s108 1621876106.000000
+R7
+R8
+!i113 1
+R9
+R10
+vmain
+!s110 1621815228
+!i10b 1
+!s100 jkRzm[nWTDGUJRCYh7fIc1
+R1
+IR`f@IU3<R=Mc;m:PQW5n[0
+R2
+R0
+w1621815227
+R3
+R4
+!i122 27
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1621815228.000000
+R7
+R8
+!i113 1
+R9
+R10
+vmain_vlg_vec_tst
+!s110 1621815229
+!i10b 1
+!s100 =GB<7=lgH>^gLFAkiRU`E0
+R1
+IL2@SDl3liBK1:]4RK:h2a0
+R2
+R0
+w1621815226
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 28
+L0 30 46
+R6
+r1
+!s85 0
+31
+R14
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R9
+R10
+vneander
+R11
+!i10b 1
+!s100 l2g2Q7ZHnbnOj`VK8E`^b3
+R1
+IiXcXA@nmTTV0AW:@2?I=81
+R2
+R0
+R12
+R3
+R4
+!i122 80
+L0 32 4226
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+vneander_vlg_vec_tst
+R11
+!i10b 1
+!s100 E[?ZmzZH^DWV42MIC^E@[0
+R1
+ID[k52h_@Fm0g=9Y5CVejN1
+R2
+R0
+w1621876104
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+!i122 81
+L0 30 107
+R6
+r1
+!s85 0
+31
+!s108 1621876107.000000
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R9
+R10

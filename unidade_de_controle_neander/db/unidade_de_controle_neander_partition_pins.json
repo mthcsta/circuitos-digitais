@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "cargaREM",
+					"strict" : false
+				},
+				{
+					"name" : "incPC",
+					"strict" : false
+				},
+				{
+					"name" : "cargaRI",
+					"strict" : false
+				},
+				{
+					"name" : "sel",
+					"strict" : false
+				},
+				{
+					"name" : "cargaRDM",
+					"strict" : false
+				},
+				{
+					"name" : "Read",
+					"strict" : false
+				},
+				{
+					"name" : "Write",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_Y",
+					"strict" : false
+				},
+				{
+					"name" : "cargaPC",
+					"strict" : false
+				},
+				{
+					"name" : "gotot0",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_ADD",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OR",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_AND",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_NOT",
+					"strict" : false
+				},
+				{
+					"name" : "cargaAC",
+					"strict" : false
+				},
+				{
+					"name" : "cargaNZ",
+					"strict" : false
+				},
+				{
+					"name" : "HALT",
+					"strict" : false
+				},
+				{
+					"name" : "INSTRUCAO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTRUCAO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTRUCAO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INSTRUCAO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sinalN",
+					"strict" : false
+				},
+				{
+					"name" : "sinalZ",
+					"strict" : false
+				},
+				{
+					"name" : "count",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
